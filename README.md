@@ -1,5 +1,5 @@
-#Image Galary
-##NB
+# Image Galary
+## NB
 if the image is not visiable, change the access key and secret key.
 I'm providing some key sets
 
