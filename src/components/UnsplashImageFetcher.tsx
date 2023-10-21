@@ -182,7 +182,7 @@ const UnsplashImageFetcher: React.FC = () => {
                 </DialogContent>
               </Dialog>
             </div>
-          ),
+          )
         )}
       </div>
     </div>
