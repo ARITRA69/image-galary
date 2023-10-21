@@ -122,15 +122,13 @@ const UnsplashImageFetcher: React.FC = () => {
                             <MapPin color="red" className="pr-2" />
                             {image.location.name}
                           </span>
-                          <span className="text-lg text-neutral-400 italic">
-                            {image.alt_description}
-                          </span>
                         </>
                       ) : (
-                        <span className="text-lg text-neutral-400 italic">
-                          {image.alt_description}
-                        </span>
+                        <></>
                       )}
+                      <span className="text-lg text-neutral-400 italic">
+                        {image.alt_description}
+                      </span>
                     </div>
                   </div>
                   <div className="flex justify-between">
@@ -147,11 +145,19 @@ const UnsplashImageFetcher: React.FC = () => {
                           <span className="flex italic text-neutral-400">
                             @{image.user.username}
                           </span>
-                          |
-                          <span className="flex items-center gap-1 italic text-neutral-400">
-                            <Instagram size={15} />
-                            <span>{image.user.social.instagram_username}</span>
-                          </span>
+                          {image.user.social.instagram_username ? (
+                            <>
+                              |
+                              <span className="flex items-center gap-1 italic text-neutral-400">
+                                <Instagram size={15} />
+                                <span>
+                                  {image.user.social.instagram_username}
+                                </span>
+                              </span>
+                            </>
+                          ) : (
+                            <></>
+                          )}
                           {image.user.social.twitter_username ? (
                             <>
                               |
@@ -176,7 +182,7 @@ const UnsplashImageFetcher: React.FC = () => {
                 </DialogContent>
               </Dialog>
             </div>
-          )
+          ),
         )}
       </div>
     </div>
