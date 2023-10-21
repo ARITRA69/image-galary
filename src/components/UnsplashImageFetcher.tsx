@@ -105,7 +105,7 @@ const UnsplashImageFetcher: React.FC = () => {
                 onOpenChange={() => handleImageClick(index)}
               >
                 <DialogContent className="bg-neutral-800">
-                  <div className="mx-auto sm:w-[300px] lg:w-[400px] 2xl:w-[450px] flex flex-col bg-red-400 justify-between relative inset-0">
+                  <div className="mx-auto sm:w-[300px] lg:w-[400px] 2xl:w-[450px] flex flex-col justify-between relative inset-0">
                     <AspectRatio ratio={4 / 3}>
                       <Image
                         src={image.urls.small}
